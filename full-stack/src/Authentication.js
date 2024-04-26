@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-const ip = "http://192.168.1.201:5000"
+const ip = "http://192.168.1.201:5000/"
 const Authentication = () => {
     const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -30,7 +30,7 @@ const Authentication = () => {
   }
     const handleRegister = async (event) =>{
     event.preventDefault();
-    const response = await fetch(ip + "/api/register", {
+    const response = await fetch(ip + "api/register", {
       method: "POST",
       headers:{
         "Content-Type": "application/json",
