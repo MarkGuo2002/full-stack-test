@@ -1,13 +1,13 @@
 import { useState } from 'react';
 
-
+ip = "http://192.168.1.149:5000/"
 const Authentication = () => {
     const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
   const handleLogin = async (event) =>{
     event.preventDefault();
-    const response = await fetch("http://localhost:5000/api/login", {
+    const response = await fetch(ip + "api/login", {
       method: "POST",
       headers:{
         "Content-Type": "application/json",
@@ -30,7 +30,7 @@ const Authentication = () => {
   }
     const handleRegister = async (event) =>{
     event.preventDefault();
-    const response = await fetch("http://localhost:5000/api/register", {
+    const response = await fetch(ip + "/api/register", {
       method: "POST",
       headers:{
         "Content-Type": "application/json",
